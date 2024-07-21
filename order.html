@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="orders.html">Orders</a></li>
+    </ul>
+    <h1>Order Confirmation</h1>
+    <div id="order-info"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+
+      
+        const orderInfoDiv = document.getElementById('order-info');
+        orderInfoDiv.innerHTML = `<p>Your order ID is: ${orderId}</p>`;
+
+
+
+        
+        });
+    </script>
+</body>
+</html>

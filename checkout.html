@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="index_css.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Checkout</title>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+    <li><a href="orders.html">Orders</a></li>
+</ul>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div id="cart-items"></div> 
+        <div id="total-cost"></div>
+        <h1>Enter Your Credit Card Information</h1>
+    <form id="credit-card-form" accept-charset="UTF-8">
+        <label for="card-number">Credit Card Number:</label><br>
+        <input type="text" id="card-number" name="card-number" required pattern="[0-9]{16}" maxlength="16"><br>
+
+        <label for="cvv">CVV:</label><br>
+        <input type="text" id="cvv" name="cvv" required pattern="[0-9]{3}" maxlength="3"><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br>
+
+        <label for="first-name">First Name:</label><br>
+        <input type="text" id="first-name" name="first-name" required><br>
+
+        <label for="last-name">Last Name:</label><br>
+        <input type="text" id="last-name" name="last-name" required><br>
+
+        </form>
+        <button id="checkout-btn">Checkout</button>
+    </div>
+    
+    <script src="carts.js"></script> 
+</body>
+
+</html>
